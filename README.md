@@ -69,7 +69,7 @@ Reliable vision systems must connect numerical claims to visible physical eviden
 
 Why do VLMs fail under symbolic `Numeric` prompting even when they recognize the instrument? By inspecting raw geometric proposals before any human geometry is used:
 - **Target–Lattice Asymmetry**: On held-out images, `Doubao` localizes the visual target boundary within `1.0` tick on **62.60%** of images (median error **0.45 ticks**), yet reconstructs the local tick lattice within `1.0` tick on only **24.39%** (median error **3.40 ticks**). Models frequently know *where* the liquid meniscus or pointer lies, but bind numerical anchors to the wrong local tick phase or spacing.
-- **Two-Endpoint Ruler Spans Double the Binding Burden**: On 22 ruler-span images requiring two endpoint bindings ($\hat{z} = |s_{t,2} - s_{t,1}|$), `Physicalized` improves accuracy by **+18.18 pp** (`Doubao`), **+23.48 pp** (`Gemini`), and **+28.79 pp** (`Qwen`), compared with `+6.37`, `+14.78`, and `+13.44 pp` on 106 single-state images.
+- **Two-Endpoint Ruler Spans Double the Binding Burden**: On 22 ruler-span images requiring two endpoint bindings ($\hat{z} = \lvert s_{t,2} - s_{t,1} \rvert$), `Physicalized` improves accuracy by **+18.18 pp** (`Doubao`), **+23.48 pp** (`Gemini`), and **+28.79 pp** (`Qwen`), compared with `+6.37`, `+14.78`, and `+13.44 pp` on 106 single-state images.
 
 <div align="center">
   <img src="assets/fig3_mechanism.png" alt="Figure 3: Complementary Mechanism Probes" width="96%"/>
@@ -84,29 +84,35 @@ Oracle `Physicalized` uses human geometry to diagnose representational headroom.
 
 ```mermaid
 flowchart LR
-    I["Input Image I & Question q"] --> D["Proposer D (Doubao)\nTarget T_D, Lattice L_D, Op o_D"]
-    I --> G["Proposer G (Gemini)\nTarget T_G, Lattice L_G, Op o_G"]
-    D --> V["Independent Component Verifier (Qwen)\nChecks Visual Evidence Only (Candidates Hidden)"]
+    I["Input Image I & Question q"] --> D["Proposer D (Doubao)<br/>Target T_D, Lattice L_D, Op o_D"]
+    I --> G["Proposer G (Gemini)<br/>Target T_G, Lattice L_G, Op o_G"]
+    D --> V["Independent Component Verifier (Qwen)<br/>Checks Visual Evidence Only (Candidates Hidden)"]
     G --> V
-    V --> R["2×2 Cross-Source Recombination\nH = {(T_D,L_D), (T_D,L_G), (T_G,L_D), (T_G,L_G)}"]
-    R --> Gate{"Precision Gate\n|H_valid|=4, ρ(ĉ)=1\nΔ_C ≥ 4 ticks"}
-    Gate -- "Pass (4/4 Invariant)" --> Accept["Accept Verified Candidate ĉ\n(91.67% Held-Out Precision)"]
+    V --> R["2x2 Cross-Source Recombination<br/>H = {(T_D,L_D), (T_D,L_G), (T_G,L_D), (T_G,L_G)}"]
+    R --> Gate{"Precision Gate<br/>|H_valid|=4, ρ(c)=1<br/>Δ_C >= 4 ticks"}
+    Gate -- "Pass (4/4 Invariant)" --> Accept["Accept Verified Candidate<br/>(91.67% Held-Out Precision)"]
     Gate -- "Otherwise" --> Fallback["Retain Upstream Numeric Reader"]
 ```
 
 ### Mathematical Formulation
 
-Given image $I$, question $q$, and candidate set $\mathcal{C} = \{c_1, c_2\}$, two VLM proposers $D$ and $G$ output structured geometric hypotheses $P_r = (T_r, L_r, o_r)$. Projecting tick clicks $p_k$ and anchor pairs $(p_a, v_a)$ onto the oriented axis $\mathbf{u}$ with minor-tick value $\delta_v$ yields the deterministic 1D local scale map:
+Given image $I$, question $q$, and candidate set $\mathcal{C} = \lbrace c_1, c_2 \rbrace$, two VLM proposers $D$ and $G$ output structured geometric hypotheses $P_r = (T_r, L_r, o_r)$. Projecting tick clicks $p_k$ and anchor pairs $(p_a, v_a)$ onto the oriented axis $\mathbf{u}$ with minor-tick value $\delta_v$ yields the deterministic 1D local scale map:
 
-$$\delta_p = \operatorname{median}_k(p_{k+1} - p_k), \qquad \phi = \operatorname{median}_a\!\left(p_a - \frac{v_a}{\delta_v}\delta_p\right), \qquad \hat{p}(v) = \phi + \frac{v}{\delta_v}\delta_p$$
+$$
+\delta_p = \mathrm{median}_k(p_{k+1} - p_k), \qquad \phi = \mathrm{median}_a\left(p_a - \frac{v_a}{\delta_v}\delta_p\right), \qquad \hat{p}(v) = \phi + \frac{v}{\delta_v}\delta_p
+$$
 
-An independent component verifier (`Qwen`) inspects rendered visual crops of the proposed target, anchors, and local ticks **without access to candidate values A/B**. Validated components form four cross-source combinations $\mathcal{H} = \{(T_D, L_D), (T_D, L_G), (T_G, L_D), (T_G, L_G)\}$. Each valid combination $(T_i, L_j)$ deterministically resolves a reading $\hat{z}_{ij} = \Psi_{o_i}(T_i, L_j)$ and selects:
+An independent component verifier (`Qwen`) inspects rendered visual crops of the proposed target, anchors, and local ticks **without access to candidate values A/B**. Validated components form four cross-source combinations $\mathcal{H} = \lbrace (T_D, L_D), (T_D, L_G), (T_G, L_D), (T_G, L_G) \rbrace$. Each valid combination $(T_i, L_j)$ deterministically resolves a reading $\hat{z}_{ij} = \Psi_{o_i}(T_i, L_j)$ and selects:
 
-$$\hat{c}_{ij} = \arg\min_{c \in \mathcal{C}} \mathcal{R}(c; \hat{z}_{ij}), \qquad \rho(c) = \frac{\sum_{(i,j)\in\mathcal{H}_{\text{valid}}} \mathbf{1}[\hat{c}_{ij} = c]}{|\mathcal{H}_{\text{valid}}|}$$
+$$
+\hat{c}_{ij} = \arg\min_{c \in \mathcal{C}} \mathcal{R}(c; \hat{z}_{ij}), \qquad \rho(c) = \frac{\sum_{(i,j)\in\mathcal{H}_{\mathrm{valid}}} \mathbf{1}[\hat{c}_{ij} = c]}{\lvert\mathcal{H}_{\mathrm{valid}}\rvert}
+$$
 
 Selected on `Dev69` (targeting $\ge 95\%$ precision) and applied **unchanged** to `Paired128`, the frozen **Precision Mode** requires:
 
-$$|\mathcal{H}_{\text{valid}}| = 4, \qquad \rho(\hat{c}) = 1 \text{ (4/4 agreement)}, \qquad \Delta_{\mathcal{C}} = \frac{|c_1 - c_2|}{\delta_v} \ge 4 \text{ ticks}$$
+$$
+\lvert\mathcal{H}_{\mathrm{valid}}\rvert = 4, \qquad \rho(\hat{c}) = 1 \;\mathrm{(4/4\;agreement)}, \qquad \Delta_{\mathcal{C}} = \frac{\lvert c_1 - c_2 \rvert}{\delta_v} \ge 4 \;\mathrm{ticks}
+$$
 
 <div align="center">
   <img src="assets/fig4_factorial_architecture.png" alt="Figure 4: Factorial StateBind Architecture" width="96%"/>
@@ -118,7 +124,7 @@ $$|\mathcal{H}_{\text{valid}}| = 4, \qquad \rho(\hat{c}) = 1 \text{ (4/4 agreeme
   <img src="assets/dashboard_factorial_verifier.png" alt="Empirical Dashboard II: Factorial StateBind & 40-Image Geometry Redraw Audit" width="100%"/>
 </div>
 
-| Selective Verification Rule ($\Delta_{\mathcal{C}} \ge 4$ ticks, $|\mathcal{H}_{\text{valid}}|=4$) | Dev69 Correct / Routed | Dev69 Precision (%) | Held-Out Correct / Routed | Held-Out Precision (%) | Held-Out Cell Coverage (%) |
+| Selective Verification Rule ($\Delta_{\mathcal{C}} \ge 4$ ticks, $\lvert\mathcal{H}_{\mathrm{valid}}\rvert=4$) | Dev69 Correct / Routed | Dev69 Precision (%) | Held-Out Correct / Routed | Held-Out Precision (%) | Held-Out Cell Coverage (%) |
 | :--- | :---: | :---: | :---: | :---: | :---: |
 | **Single Constituent (`GG`)** | 69 / 78 | 88.46% | 90 / 116 | 77.59% | 15.59% |
 | **3-of-4 Majority Vote** | 53 / 59 | 89.83% | 76 / 92 | 82.61% | 12.37% |
