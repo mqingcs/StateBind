@@ -1,0 +1,249 @@
+{
+  "any_feasible_rule_frequency": 0.92475,
+  "bootstrap_replicates": 20000,
+  "bootstrap_unit": "source_image",
+  "cells_per_image": 6,
+  "development_images": 69,
+  "evidence_boundary": {
+    "heldout_labels_read": false,
+    "network_calls": 0,
+    "resampling_unit": "source image with all six distance/sign cells retained",
+    "rules_redefined": false
+  },
+  "original_rule_feasible_frequency": 0.9246,
+  "original_rule_reselected_frequency": 0.4049,
+  "original_selected_rule": {
+    "all_candidates": 414,
+    "candidate_precision": 0.98,
+    "minimum_distance": 4,
+    "overall_coverage": 0.12077294685990338,
+    "precision_requirement": 0.95,
+    "precision_requirement_met": true,
+    "routed_candidates": 50,
+    "rule_name": "four_only",
+    "selection_rule": "maximum Existing69 coverage subject to >=0.95 candidate precision among nine predefined invariance-by-distance rules",
+    "test_labels_used": false
+  },
+  "original_selected_rule_key": "four_only__d4",
+  "precision_requirement": 0.95,
+  "rules": [
+    {
+      "candidate_precision": {
+        "median": 0.9186991869918699,
+        "p025": 0.8512396694214877,
+        "p975": 0.975609756097561
+      },
+      "feasible_frequency": 0.156,
+      "minimum_distance": 1,
+      "overall_coverage": {
+        "median": 0.3188405797101449,
+        "p025": 0.24154589371980675,
+        "p975": 0.40096618357487923
+      },
+      "routed_candidates": {
+        "median": 132.0,
+        "p025": 100.0,
+        "p975": 166.0
+      },
+      "rule_key": "four_only__d1",
+      "rule_name": "four_only",
+      "selected_count": 3119,
+      "selected_frequency": 0.15595
+    },
+    {
+      "candidate_precision": {
+        "median": 0.9506172839506173,
+        "p025": 0.8942307692307693,
+        "p975": 0.9902912621359223
+      },
+      "feasible_frequency": 0.5154,
+      "minimum_distance": 2,
+      "overall_coverage": {
+        "median": 0.23429951690821257,
+        "p025": 0.178743961352657,
+        "p975": 0.2946859903381642
+      },
+      "routed_candidates": {
+        "median": 97.0,
+        "p025": 74.0,
+        "p975": 122.0
+      },
+      "rule_key": "four_only__d2",
+      "rule_name": "four_only",
+      "selected_count": 7188,
+      "selected_frequency": 0.3594
+    },
+    {
+      "candidate_precision": {
+        "median": 0.9807692307692307,
+        "p025": 0.9347826086956522,
+        "p975": 1.0
+      },
+      "feasible_frequency": 0.9246,
+      "minimum_distance": 4,
+      "overall_coverage": {
+        "median": 0.12077294685990338,
+        "p025": 0.09178743961352658,
+        "p975": 0.15217391304347827
+      },
+      "routed_candidates": {
+        "median": 50.0,
+        "p025": 38.0,
+        "p975": 63.0
+      },
+      "rule_key": "four_only__d4",
+      "rule_name": "four_only",
+      "selected_count": 8098,
+      "selected_frequency": 0.4049
+    },
+    {
+      "candidate_precision": {
+        "median": 0.9186991869918699,
+        "p025": 0.8512396694214877,
+        "p975": 0.975609756097561
+      },
+      "feasible_frequency": 0.156,
+      "minimum_distance": 1,
+      "overall_coverage": {
+        "median": 0.3188405797101449,
+        "p025": 0.24154589371980675,
+        "p975": 0.40096618357487923
+      },
+      "routed_candidates": {
+        "median": 132.0,
+        "p025": 100.0,
+        "p975": 166.0
+      },
+      "rule_key": "strict_invariance__d1",
+      "rule_name": "strict_invariance",
+      "selected_count": 0,
+      "selected_frequency": 0.0
+    },
+    {
+      "candidate_precision": {
+        "median": 0.9506172839506173,
+        "p025": 0.8942307692307693,
+        "p975": 0.9902912621359223
+      },
+      "feasible_frequency": 0.5154,
+      "minimum_distance": 2,
+      "overall_coverage": {
+        "median": 0.23429951690821257,
+        "p025": 0.178743961352657,
+        "p975": 0.2946859903381642
+      },
+      "routed_candidates": {
+        "median": 97.0,
+        "p025": 74.0,
+        "p975": 122.0
+      },
+      "rule_key": "strict_invariance__d2",
+      "rule_name": "strict_invariance",
+      "selected_count": 0,
+      "selected_frequency": 0.0
+    },
+    {
+      "candidate_precision": {
+        "median": 0.9807692307692307,
+        "p025": 0.9347826086956522,
+        "p975": 1.0
+      },
+      "feasible_frequency": 0.9246,
+      "minimum_distance": 4,
+      "overall_coverage": {
+        "median": 0.12077294685990338,
+        "p025": 0.09178743961352658,
+        "p975": 0.15217391304347827
+      },
+      "routed_candidates": {
+        "median": 50.0,
+        "p025": 38.0,
+        "p975": 63.0
+      },
+      "rule_key": "strict_invariance__d4",
+      "rule_name": "strict_invariance",
+      "selected_count": 0,
+      "selected_frequency": 0.0
+    },
+    {
+      "candidate_precision": {
+        "median": 0.8014705882352942,
+        "p025": 0.7290293431791682,
+        "p975": 0.8737385995881141
+      },
+      "feasible_frequency": 0.0,
+      "minimum_distance": 1,
+      "overall_coverage": {
+        "median": 0.4251207729468599,
+        "p025": 0.3285024154589372,
+        "p975": 0.5217391304347826
+      },
+      "routed_candidates": {
+        "median": 176.0,
+        "p025": 136.0,
+        "p975": 216.0
+      },
+      "rule_key": "three_of_four_majority__d1",
+      "rule_name": "three_of_four_majority",
+      "selected_count": 0,
+      "selected_frequency": 0.0
+    },
+    {
+      "candidate_precision": {
+        "median": 0.848380355276907,
+        "p025": 0.773109243697479,
+        "p975": 0.9187542229729726
+      },
+      "feasible_frequency": 0.002,
+      "minimum_distance": 2,
+      "overall_coverage": {
+        "median": 0.28502415458937197,
+        "p025": 0.21980676328502416,
+        "p975": 0.3526570048309179
+      },
+      "routed_candidates": {
+        "median": 118.0,
+        "p025": 91.0,
+        "p975": 146.0
+      },
+      "rule_key": "three_of_four_majority__d2",
+      "rule_name": "three_of_four_majority",
+      "selected_count": 1,
+      "selected_frequency": 5e-05
+    },
+    {
+      "candidate_precision": {
+        "median": 0.9,
+        "p025": 0.8235294117647058,
+        "p975": 0.9655172413793104
+      },
+      "feasible_frequency": 0.07595,
+      "minimum_distance": 4,
+      "overall_coverage": {
+        "median": 0.14251207729468598,
+        "p025": 0.10869565217391304,
+        "p975": 0.17632850241545894
+      },
+      "routed_candidates": {
+        "median": 59.0,
+        "p025": 45.0,
+        "p975": 73.0
+      },
+      "rule_key": "three_of_four_majority__d4",
+      "rule_name": "three_of_four_majority",
+      "selected_count": 89,
+      "selected_frequency": 0.00445
+    }
+  ],
+  "schema_version": "dev-rule-selection-stability-v1",
+  "seed": 20260822,
+  "selection_frequencies": {
+    "four_only__d1": 3119,
+    "four_only__d2": 7188,
+    "four_only__d4": 8098,
+    "no_feasible_rule": 1505,
+    "three_of_four_majority__d2": 1,
+    "three_of_four_majority__d4": 89
+  },
+  "selection_objective": "maximum Existing69 coverage subject to >=0.95 candidate precision among nine predefined invariance-by-distance rules"
+}

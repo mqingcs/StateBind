@@ -1,0 +1,385 @@
+{
+  "evidence_boundary": {
+    "component_verification": "pre-existing Qwen target/anchor/lattice validity records",
+    "development_split": "Existing69",
+    "diagnostic_component_ablation": "each mode uses its own maximum-development-precision point; this comparison is explanatory, not a new frozen router",
+    "network_calls": 0,
+    "test_labels_used_to_select_formal_95_percent_rule": false,
+    "test_split": "StateBind-Test-Paired"
+  },
+  "headline": {
+    "cross_frame_does_not_reach_95_percent_on_development": true,
+    "factorial_reaches_95_percent_on_development": true,
+    "interpretation": "Candidate identity that remains invariant across the target-by-lattice cross-product is a stronger reliability signal than agreement between the two self-contained proposals alone.",
+    "self_frame_does_not_reach_95_percent_on_development": true
+  },
+  "modes": {
+    "cross_frame": {
+      "development_rules": [
+        {
+          "all_candidates": 414,
+          "candidate_precision": 0.8115183246073299,
+          "eligible_candidates": 414,
+          "eligible_coverage": 0.4613526570048309,
+          "minimum_distance": 1,
+          "minimum_votes": 1,
+          "overall_coverage": 0.4613526570048309,
+          "precision_requirement_met": false,
+          "routed_candidates": 191
+        },
+        {
+          "all_candidates": 414,
+          "candidate_precision": 0.8671328671328671,
+          "eligible_candidates": 414,
+          "eligible_coverage": 0.34541062801932365,
+          "minimum_distance": 1,
+          "minimum_votes": 2,
+          "overall_coverage": 0.34541062801932365,
+          "precision_requirement_met": false,
+          "routed_candidates": 143
+        },
+        {
+          "all_candidates": 414,
+          "candidate_precision": 0.837037037037037,
+          "eligible_candidates": 276,
+          "eligible_coverage": 0.4891304347826087,
+          "minimum_distance": 2,
+          "minimum_votes": 1,
+          "overall_coverage": 0.32608695652173914,
+          "precision_requirement_met": false,
+          "routed_candidates": 135
+        },
+        {
+          "all_candidates": 414,
+          "candidate_precision": 0.8932038834951457,
+          "eligible_candidates": 276,
+          "eligible_coverage": 0.37318840579710144,
+          "minimum_distance": 2,
+          "minimum_votes": 2,
+          "overall_coverage": 0.24879227053140096,
+          "precision_requirement_met": false,
+          "routed_candidates": 103
+        },
+        {
+          "all_candidates": 414,
+          "candidate_precision": 0.8823529411764706,
+          "eligible_candidates": 138,
+          "eligible_coverage": 0.4927536231884058,
+          "minimum_distance": 4,
+          "minimum_votes": 1,
+          "overall_coverage": 0.1642512077294686,
+          "precision_requirement_met": false,
+          "routed_candidates": 68
+        },
+        {
+          "all_candidates": 414,
+          "candidate_precision": 0.9423076923076923,
+          "eligible_candidates": 138,
+          "eligible_coverage": 0.37681159420289856,
+          "minimum_distance": 4,
+          "minimum_votes": 2,
+          "overall_coverage": 0.12560386473429952,
+          "precision_requirement_met": false,
+          "routed_candidates": 52
+        }
+      ],
+      "development_selected_rule_at_95_precision": null,
+      "diagnostic_rule": {
+        "development": {
+          "all_candidates": 414,
+          "candidate_precision": 0.9423076923076923,
+          "eligible_candidates": 138,
+          "eligible_coverage": 0.37681159420289856,
+          "minimum_distance": 4,
+          "minimum_votes": 2,
+          "overall_coverage": 0.12560386473429952,
+          "precision_requirement_met": false,
+          "routed_candidates": 52
+        },
+        "selection": "maximum development precision, then coverage; used only for the component-set ablation",
+        "test": {
+          "all_candidates": 744,
+          "candidate_precision": 0.9210526315789473,
+          "overall_coverage": 0.10215053763440861,
+          "routed_candidates": 76,
+          "source_images": 38
+        }
+      },
+      "methods": [
+        "doubao_target_gemini_lattice",
+        "gemini_target_doubao_lattice"
+      ]
+    },
+    "factorial": {
+      "development_rules": [
+        {
+          "all_candidates": 414,
+          "candidate_precision": 0.8340425531914893,
+          "eligible_candidates": 414,
+          "eligible_coverage": 0.5676328502415459,
+          "minimum_distance": 1,
+          "minimum_votes": 1,
+          "overall_coverage": 0.5676328502415459,
+          "precision_requirement_met": false,
+          "routed_candidates": 235
+        },
+        {
+          "all_candidates": 414,
+          "candidate_precision": 0.8571428571428571,
+          "eligible_candidates": 414,
+          "eligible_coverage": 0.4227053140096618,
+          "minimum_distance": 1,
+          "minimum_votes": 2,
+          "overall_coverage": 0.4227053140096618,
+          "precision_requirement_met": false,
+          "routed_candidates": 175
+        },
+        {
+          "all_candidates": 414,
+          "candidate_precision": 0.9166666666666666,
+          "eligible_candidates": 414,
+          "eligible_coverage": 0.3188405797101449,
+          "minimum_distance": 1,
+          "minimum_votes": 3,
+          "overall_coverage": 0.3188405797101449,
+          "precision_requirement_met": false,
+          "routed_candidates": 132
+        },
+        {
+          "all_candidates": 414,
+          "candidate_precision": 0.9166666666666666,
+          "eligible_candidates": 414,
+          "eligible_coverage": 0.3188405797101449,
+          "minimum_distance": 1,
+          "minimum_votes": 4,
+          "overall_coverage": 0.3188405797101449,
+          "precision_requirement_met": false,
+          "routed_candidates": 132
+        },
+        {
+          "all_candidates": 414,
+          "candidate_precision": 0.8734939759036144,
+          "eligible_candidates": 276,
+          "eligible_coverage": 0.6014492753623188,
+          "minimum_distance": 2,
+          "minimum_votes": 1,
+          "overall_coverage": 0.40096618357487923,
+          "precision_requirement_met": false,
+          "routed_candidates": 166
+        },
+        {
+          "all_candidates": 414,
+          "candidate_precision": 0.8968253968253969,
+          "eligible_candidates": 276,
+          "eligible_coverage": 0.45652173913043476,
+          "minimum_distance": 2,
+          "minimum_votes": 2,
+          "overall_coverage": 0.30434782608695654,
+          "precision_requirement_met": false,
+          "routed_candidates": 126
+        },
+        {
+          "all_candidates": 414,
+          "candidate_precision": 0.9484536082474226,
+          "eligible_candidates": 276,
+          "eligible_coverage": 0.35144927536231885,
+          "minimum_distance": 2,
+          "minimum_votes": 3,
+          "overall_coverage": 0.23429951690821257,
+          "precision_requirement_met": false,
+          "routed_candidates": 97
+        },
+        {
+          "all_candidates": 414,
+          "candidate_precision": 0.9484536082474226,
+          "eligible_candidates": 276,
+          "eligible_coverage": 0.35144927536231885,
+          "minimum_distance": 2,
+          "minimum_votes": 4,
+          "overall_coverage": 0.23429951690821257,
+          "precision_requirement_met": false,
+          "routed_candidates": 97
+        },
+        {
+          "all_candidates": 414,
+          "candidate_precision": 0.9047619047619048,
+          "eligible_candidates": 138,
+          "eligible_coverage": 0.6086956521739131,
+          "minimum_distance": 4,
+          "minimum_votes": 1,
+          "overall_coverage": 0.2028985507246377,
+          "precision_requirement_met": false,
+          "routed_candidates": 84
+        },
+        {
+          "all_candidates": 414,
+          "candidate_precision": 0.9375,
+          "eligible_candidates": 138,
+          "eligible_coverage": 0.463768115942029,
+          "minimum_distance": 4,
+          "minimum_votes": 2,
+          "overall_coverage": 0.15458937198067632,
+          "precision_requirement_met": false,
+          "routed_candidates": 64
+        },
+        {
+          "all_candidates": 414,
+          "candidate_precision": 0.98,
+          "eligible_candidates": 138,
+          "eligible_coverage": 0.36231884057971014,
+          "minimum_distance": 4,
+          "minimum_votes": 3,
+          "overall_coverage": 0.12077294685990338,
+          "precision_requirement_met": true,
+          "routed_candidates": 50
+        },
+        {
+          "all_candidates": 414,
+          "candidate_precision": 0.98,
+          "eligible_candidates": 138,
+          "eligible_coverage": 0.36231884057971014,
+          "minimum_distance": 4,
+          "minimum_votes": 4,
+          "overall_coverage": 0.12077294685990338,
+          "precision_requirement_met": true,
+          "routed_candidates": 50
+        }
+      ],
+      "development_selected_rule_at_95_precision": {
+        "all_candidates": 414,
+        "candidate_precision": 0.98,
+        "eligible_candidates": 138,
+        "eligible_coverage": 0.36231884057971014,
+        "minimum_distance": 4,
+        "minimum_votes": 3,
+        "overall_coverage": 0.12077294685990338,
+        "precision_requirement_met": true,
+        "routed_candidates": 50
+      },
+      "diagnostic_rule": {
+        "development": {
+          "all_candidates": 414,
+          "candidate_precision": 0.98,
+          "eligible_candidates": 138,
+          "eligible_coverage": 0.36231884057971014,
+          "minimum_distance": 4,
+          "minimum_votes": 3,
+          "overall_coverage": 0.12077294685990338,
+          "precision_requirement_met": true,
+          "routed_candidates": 50
+        },
+        "selection": "maximum development precision, then coverage; used only for the component-set ablation",
+        "test": {
+          "all_candidates": 744,
+          "candidate_precision": 0.9166666666666666,
+          "overall_coverage": 0.0967741935483871,
+          "routed_candidates": 72,
+          "source_images": 36
+        }
+      },
+      "methods": [
+        "gemini_target_gemini_lattice",
+        "doubao_target_doubao_lattice",
+        "doubao_target_gemini_lattice",
+        "gemini_target_doubao_lattice"
+      ]
+    },
+    "self_frame": {
+      "development_rules": [
+        {
+          "all_candidates": 414,
+          "candidate_precision": 0.7912087912087912,
+          "eligible_candidates": 414,
+          "eligible_coverage": 0.6594202898550725,
+          "minimum_distance": 1,
+          "minimum_votes": 1,
+          "overall_coverage": 0.6594202898550725,
+          "precision_requirement_met": false,
+          "routed_candidates": 273
+        },
+        {
+          "all_candidates": 414,
+          "candidate_precision": 0.8363636363636363,
+          "eligible_candidates": 414,
+          "eligible_coverage": 0.39855072463768115,
+          "minimum_distance": 1,
+          "minimum_votes": 2,
+          "overall_coverage": 0.39855072463768115,
+          "precision_requirement_met": false,
+          "routed_candidates": 165
+        },
+        {
+          "all_candidates": 414,
+          "candidate_precision": 0.8478260869565217,
+          "eligible_candidates": 276,
+          "eligible_coverage": 0.6666666666666666,
+          "minimum_distance": 2,
+          "minimum_votes": 1,
+          "overall_coverage": 0.4444444444444444,
+          "precision_requirement_met": false,
+          "routed_candidates": 184
+        },
+        {
+          "all_candidates": 414,
+          "candidate_precision": 0.8928571428571429,
+          "eligible_candidates": 276,
+          "eligible_coverage": 0.4057971014492754,
+          "minimum_distance": 2,
+          "minimum_votes": 2,
+          "overall_coverage": 0.27053140096618356,
+          "precision_requirement_met": false,
+          "routed_candidates": 112
+        },
+        {
+          "all_candidates": 414,
+          "candidate_precision": 0.8817204301075269,
+          "eligible_candidates": 138,
+          "eligible_coverage": 0.6739130434782609,
+          "minimum_distance": 4,
+          "minimum_votes": 1,
+          "overall_coverage": 0.2246376811594203,
+          "precision_requirement_met": false,
+          "routed_candidates": 93
+        },
+        {
+          "all_candidates": 414,
+          "candidate_precision": 0.9298245614035088,
+          "eligible_candidates": 138,
+          "eligible_coverage": 0.41304347826086957,
+          "minimum_distance": 4,
+          "minimum_votes": 2,
+          "overall_coverage": 0.13768115942028986,
+          "precision_requirement_met": false,
+          "routed_candidates": 57
+        }
+      ],
+      "development_selected_rule_at_95_precision": null,
+      "diagnostic_rule": {
+        "development": {
+          "all_candidates": 414,
+          "candidate_precision": 0.9298245614035088,
+          "eligible_candidates": 138,
+          "eligible_coverage": 0.41304347826086957,
+          "minimum_distance": 4,
+          "minimum_votes": 2,
+          "overall_coverage": 0.13768115942028986,
+          "precision_requirement_met": false,
+          "routed_candidates": 57
+        },
+        "selection": "maximum development precision, then coverage; used only for the component-set ablation",
+        "test": {
+          "all_candidates": 744,
+          "candidate_precision": 0.8222222222222222,
+          "overall_coverage": 0.12096774193548387,
+          "routed_candidates": 90,
+          "source_images": 45
+        }
+      },
+      "methods": [
+        "gemini_target_gemini_lattice",
+        "doubao_target_doubao_lattice"
+      ]
+    }
+  },
+  "schema_version": "factorial-binding-consensus-analysis-v1"
+}

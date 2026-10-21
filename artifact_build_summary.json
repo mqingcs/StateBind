@@ -1,0 +1,21 @@
+{
+  "built_at_utc": "2026-08-26T15:44:14.748927+00:00",
+  "component_validations": {
+    "qwen_on_doubao": 184,
+    "qwen_on_gemini": 191
+  },
+  "formal_calls": 6696,
+  "hash_manifest_added": false,
+  "images": 200,
+  "independent_geometry_audit": 40,
+  "ordered_cells": 744,
+  "pairs": 372,
+  "proposals": {
+    "doubao": 200,
+    "gemini": 200
+  },
+  "requests": 2232,
+  "route_cells": 72,
+  "route_images": 36,
+  "schema_version": "statebind-anonymous-artifact-build-v1"
+}

@@ -1,0 +1,88 @@
+{
+  "dataset": {
+    "formal_calls": 6696,
+    "images": 200,
+    "ordered_cells": 744,
+    "pairs": 372
+  },
+  "factorial_route": {
+    "cells": 72,
+    "correct": 66,
+    "images": 36,
+    "precision": 0.9166666666666666
+  },
+  "majority": {
+    "accuracy": {
+      "calibrated_numeric": 0.7379032258064516,
+      "numeric": 0.7553763440860215,
+      "oracle_physicalized": 0.9112903225806451
+    },
+    "physicalized_minus_numeric_image_balanced": 0.15299479166666666
+  },
+  "providers": {
+    "doubao": {
+      "calls": 2232,
+      "interfaces": {
+        "calibrated_numeric": {
+          "accuracy": 0.6370967741935484,
+          "calls": 744,
+          "correct": 474
+        },
+        "numeric": {
+          "accuracy": 0.6693548387096774,
+          "calls": 744,
+          "correct": 498
+        },
+        "oracle_physicalized": {
+          "accuracy": 0.7553763440860215,
+          "calls": 744,
+          "correct": 562
+        }
+      },
+      "physicalized_minus_numeric_image_balanced": 0.083984375
+    },
+    "gemini": {
+      "calls": 2232,
+      "interfaces": {
+        "calibrated_numeric": {
+          "accuracy": 0.7110215053763441,
+          "calls": 744,
+          "correct": 529
+        },
+        "numeric": {
+          "accuracy": 0.7432795698924731,
+          "calls": 744,
+          "correct": 553
+        },
+        "oracle_physicalized": {
+          "accuracy": 0.9086021505376344,
+          "calls": 744,
+          "correct": 676
+        }
+      },
+      "physicalized_minus_numeric_image_balanced": 0.16276041666666666
+    },
+    "qwen_batch_no_thinking": {
+      "calls": 2232,
+      "interfaces": {
+        "calibrated_numeric": {
+          "accuracy": 0.7405913978494624,
+          "calls": 744,
+          "correct": 551
+        },
+        "numeric": {
+          "accuracy": 0.7352150537634409,
+          "calls": 744,
+          "correct": 547
+        },
+        "oracle_physicalized": {
+          "accuracy": 0.9005376344086021,
+          "calls": 744,
+          "correct": 670
+        }
+      },
+      "physicalized_minus_numeric_image_balanced": 0.16080729166666666
+    }
+  },
+  "schema_version": "statebind-artifact-rebuilt-core-v1"
+}

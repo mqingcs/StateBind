@@ -1,0 +1,64 @@
+\section{Problem Formulation and StateBind-200}
+\label{sec:data}
+
+\subsection{Instance-Specific Symbol-to-State Binding}
+
+Let $I$ be a real instrument image, $q$ its measurement question, and $\C=\{c_1,c_2\}$ two numerical candidates expressed in a common unit. A measurement is governed by an image-specific state map
+\begin{equation}
+  g_I : v \mapsto s,
+  \label{eq:map}
+\end{equation}
+where $v$ is a numerical value and $s$ is its physical state on the photographed scale. In the simplest case $s$ is a scalar coordinate along an axis; for a span it is a pair of endpoint states. Unlike a semantic class label, $g_I$ changes with every image. It includes the selected scale branch, unit, direction of increase, local tick spacing and phase, perspective, and readout operator.
+
+We instantiate two alternatives and a one-dimensional local state so the matched intervention is exact. Equations~\eqref{eq:map}--\eqref{eq:candidate} admit any finite candidate set and structured state for which a residual is defined.
+
+The visual target is $s_t(I,q)$. Given a state residual $\R$, candidate verification is
+\begin{equation}
+  c^\star = \arg\min_{c\in\C} \R\!\left(g_I(c),s_t\right).
+  \label{eq:candidate}
+\end{equation}
+For absolute or boundary readout, $\R$ is distance to the target interval; for a span, it compares the candidate with the difference between two endpoints. We use \emph{absolute position}, \emph{boundary position} (e.g., liquid surfaces or columns), and \emph{span difference}. A model may therefore estimate $s_t$ well while estimating $g_I$ poorly, or vice versa.
+
+\subsection{Human-Refined Local State Geometry}
+
+\dataset{} augments real-world MeasureBench images~\cite{lin2026measurebench}. It contains \DatasetImages{} images with a visible one-dimensional physical scale, spanning \DatasetFamilies{} instrument families including thermometers, cylinders, rulers, sphygmomanometers, syringes, flow meters, spirometers, rain and fuel gauges, a vernier caliper, and a weighing scale.
+
+Each annotation records an axis; target interval or span endpoints; two adjacent minor ticks near the readout; tick value, unit, branch, visibility, and operator. Clicks are projected into the one-dimensional coordinate, with local ticks accommodating perspective. Across 53 auxiliary ticks not used to fit the local map from 24 multi-tick images, the two-tick affine map has 0.065-tick median error (mean 0.122; maximum 0.487). The 131-image extension was proposal-seeded to reduce clicking, but every record was modified and human-confirmed while model predictions and evaluator answers were hidden.
+
+A second reviewer then redrew the geometry of a stratified \GeometryAuditImages{}-image audit spanning all \GeometryAuditFamilies{} families. Primary point coordinates remained hidden; tick semantics were prefilled and editable so the audit focused on spatial reproduction. All \GeometryAuditImages{} images remained included. Median target discrepancy was \GeometryAuditTargetMedian{} tick, with \GeometryAuditWithinHalf{}/\GeometryAuditImages{} cases within 0.5 tick and \GeometryAuditWithinOne{}/\GeometryAuditImages{} within one tick; median local-scale orientation difference was \GeometryAuditAxisMedian$^{\circ}$ and median tick-spacing difference was \GeometryAuditTickSpacingMedianDelta\%. Excluding the two cases beyond one tick leaves the majority effect at \GeometryAuditSensitivityGain{} points, compared with \MajorityBalancedGain{} on the complete evaluation.
+
+\begin{table}[t]
+  \centering
+  \caption{\dataset{} paired-test protocol. Every planned cell contributes one successfully parsed final response; retries preserve its cell ID, and no output is filtered by predicted choice.}
+  \label{tab:dataset}
+  \small
+  \setlength{\tabcolsep}{8pt}
+  \input{tables/dataset_protocol.tex}
+\end{table}
+
+The first 69 images form \textsc{Dev69}; the later \HeldoutImages{} form the held-out pool. After cell-level visibility and rendering checks, \PairedImages{} unique images contribute \ImageDistancePairs{} valid image--distance pairs: 127 at one tick, 125 at two ticks, and 120 at four ticks. Each pair is evaluated in both candidate orders, yielding \CallsPerInterface{} ordered cells per interface and model. Reliability configurations are selected on Dev69 and applied unchanged to Paired128; held-out labels are used only for final scoring.
+
+\subsection{Matched Candidate Interfaces}
+\label{sec:interfaces}
+
+For each renderable image--distance pair with $d\in\{1,2,4\}$, a correct candidate is paired with an alternative displaced by $d$ local ticks. Primary and swapped orders are reused unchanged across interfaces:
+
+\paragraph{Numeric.}
+Image, question, and numerical candidates; the VLM infers both $s_t$ and $g_I(c)$.
+
+\paragraph{Calibrated.}
+Numeric plus the correct branch, unit, direction, and minor-tick value; no candidate location is drawn.
+
+\paragraph{Oracle Physicalized.}
+Candidates are rendered in matched panels at $g_I(c_1)$ and $g_I(c_2)$. Numerical identities, order, crop, and question remain matched. This diagnostic interface isolates candidate-state access; Sec.~\ref{sec:method} develops the automatic counterpart.
+
+Models return structured A/B choices, scored by candidate identity after undoing order randomization. The matrix contains \CallsPerInterface{} calls per interface per model and \FormalCalls{} total calls.
+
+\subsection{Evaluation Unit}
+
+Raw accuracy uses all \CallsPerInterface{} ordered cells per interface and model. Treatment effects first average paired differences within each source image, then across images. Confidence intervals resample source images (20,000 samples per model; 50,000 for majority and family analyses). Tables distinguish call accuracy from image-balanced effects.
+
+The companion repository\footnote{\url{https://github.com/mqingcs/StateBind}}
+provides 200 geometry records, exact manifests for all 2,232 requests,
+the 6,696-response ledger, proposal and validation records,
+and deterministic rebuild scripts for all reported results.

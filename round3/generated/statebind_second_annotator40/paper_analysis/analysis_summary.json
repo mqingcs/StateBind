@@ -1,0 +1,107 @@
+{
+  "coordinate_integrity": {
+    "normalized_1000_rescaled_again": false,
+    "out_of_bounds_points": 0,
+    "primary_points_checked": 310,
+    "secondary_points_checked": 320,
+    "stored_image_pixel_frame_shared": true
+  },
+  "independent_geometry": {
+    "axis_angle_degrees": {
+      "median": 0.17157784965223005,
+      "p90": 0.5634296817040345
+    },
+    "second_reviewer_excluded": 0,
+    "second_reviewer_included": 40,
+    "target_difference_ticks": {
+      "greater_than_one_tick": 2,
+      "median": 0.07991380905028055,
+      "p75": 0.1934728179906244,
+      "p90": 0.38374391103899136,
+      "within_half_tick": 37,
+      "within_half_tick_rate": 0.925,
+      "within_one_tick": 38,
+      "within_one_tick_rate": 0.95
+    },
+    "tick_spacing_ratio": {
+      "median": 1.0456744856229494,
+      "p90": 1.2137003691201669
+    }
+  },
+  "main_effect_sensitivity": {
+    "criterion": "exclude the two audited images with target disagreement greater than one local tick",
+    "excluded_images": [
+      "r4_031",
+      "r4r_016"
+    ],
+    "readers": {
+      "doubao": {
+        "audited_concordant_effect": 0.17753623188405795,
+        "audited_concordant_images_in_paired128": 23,
+        "audited_effect": 0.17666666666666667,
+        "audited_images_in_paired128": 25,
+        "excluding_gt1_tick_effect": 0.08267195767195767,
+        "excluding_gt1_tick_images": 126,
+        "full_effect": 0.083984375,
+        "full_images": 128,
+        "reader": "doubao"
+      },
+      "gemini": {
+        "audited_concordant_effect": 0.10869565217391304,
+        "audited_concordant_images_in_paired128": 23,
+        "audited_effect": 0.09333333333333332,
+        "audited_images_in_paired128": 25,
+        "excluding_gt1_tick_effect": 0.16666666666666666,
+        "excluding_gt1_tick_images": 126,
+        "full_effect": 0.16276041666666666,
+        "full_images": 128,
+        "reader": "gemini"
+      },
+      "majority": {
+        "audited_concordant_effect": 0.16304347826086957,
+        "audited_concordant_images_in_paired128": 23,
+        "audited_effect": 0.15,
+        "audited_images_in_paired128": 25,
+        "excluding_gt1_tick_effect": 0.1554232804232804,
+        "excluding_gt1_tick_images": 126,
+        "full_effect": 0.15299479166666666,
+        "full_images": 128,
+        "reader": "majority"
+      },
+      "qwen": {
+        "audited_concordant_effect": 0.07971014492753623,
+        "audited_concordant_images_in_paired128": 23,
+        "audited_effect": 0.09333333333333334,
+        "audited_images_in_paired128": 25,
+        "excluding_gt1_tick_effect": 0.1593915343915344,
+        "excluding_gt1_tick_images": 126,
+        "full_effect": 0.16080729166666666,
+        "full_images": 128,
+        "reader": "qwen"
+      }
+    }
+  },
+  "paper_interpretation": {
+    "independent_evidence": [
+      "include/exclude decision",
+      "axis coordinates",
+      "target coordinates",
+      "adjacent local tick coordinates"
+    ],
+    "not_independent_because_prefilled": [
+      "target rule",
+      "minor tick value",
+      "unit",
+      "scale branch"
+    ]
+  },
+  "sample": {
+    "dev69_images": 14,
+    "families": 11,
+    "geometry_coordinates_prefilled": false,
+    "images": 40,
+    "new131_images": 26,
+    "semantic_fields_prefilled_and_editable": true
+  },
+  "schema_version": "statebind-second-annotator40-paper-analysis-v1"
+}

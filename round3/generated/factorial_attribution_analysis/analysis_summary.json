@@ -1,0 +1,281 @@
+{
+  "dataset": {
+    "by_distance": {
+      "1": {
+        "image_distance_pairs": 127,
+        "ordered_cells": 254,
+        "unique_images": 127
+      },
+      "2": {
+        "image_distance_pairs": 125,
+        "ordered_cells": 250,
+        "unique_images": 125
+      },
+      "4": {
+        "image_distance_pairs": 120,
+        "ordered_cells": 240,
+        "unique_images": 120
+      }
+    },
+    "calls_per_model_main_matrix": 2232,
+    "formal_calls_main_matrix": 6696,
+    "heldout_pool_images": 131,
+    "image_distance_pairs": 372,
+    "ordered_cells_per_interface_per_model": 744,
+    "paired_unique_images": 128
+  },
+  "evidence_boundary": {
+    "development_labels_select_gg_constituent": true,
+    "heldout_labels_used_for_rule_selection": false,
+    "network_calls": 0,
+    "qwen_component_verifier_outputs_candidate_identity": false
+  },
+  "exact_factorial_route": {
+    "cell_coverage": 0.0967741935483871,
+    "cells": 72,
+    "families": 5,
+    "image_coverage": 0.28125,
+    "images": 36,
+    "readers": {
+      "doubao": {
+        "accuracy": 0.7222222222222222,
+        "correct": 52,
+        "total": 72
+      },
+      "factorial_statebind": {
+        "accuracy": 0.9166666666666666,
+        "correct": 66,
+        "total": 72
+      },
+      "gemini": {
+        "accuracy": 0.875,
+        "correct": 63,
+        "total": 72
+      },
+      "qwen_batch_no_thinking": {
+        "accuracy": 0.9166666666666666,
+        "correct": 66,
+        "total": 72
+      },
+      "three_model_numeric_majority": {
+        "accuracy": 0.9166666666666666,
+        "correct": 66,
+        "total": 72
+      }
+    }
+  },
+  "same_support": {
+    "definition": "distance=4 and all four target-lattice combinations component-valid",
+    "development": {
+      "rules": {
+        "cross_agreement": {
+          "candidate_precision": 0.9423076923076923,
+          "correct": 49,
+          "coverage": 0.6666666666666666,
+          "coverage_of_all_cells": 0.12560386473429952,
+          "routed": 52,
+          "source_images": 37
+        },
+        "factorial_agreement": {
+          "candidate_precision": 0.98,
+          "correct": 49,
+          "coverage": 0.6410256410256411,
+          "coverage_of_all_cells": 0.12077294685990338,
+          "routed": 50,
+          "source_images": 37
+        },
+        "gg_constituent": {
+          "candidate_precision": 0.8846153846153846,
+          "correct": 69,
+          "coverage": 1.0,
+          "coverage_of_all_cells": 0.18840579710144928,
+          "routed": 78,
+          "source_images": 39
+        },
+        "self_agreement": {
+          "candidate_precision": 0.9298245614035088,
+          "correct": 53,
+          "coverage": 0.7307692307692307,
+          "coverage_of_all_cells": 0.13768115942028986,
+          "routed": 57,
+          "source_images": 38
+        },
+        "three_of_four_vote": {
+          "candidate_precision": 0.8983050847457628,
+          "correct": 53,
+          "coverage": 0.7564102564102564,
+          "coverage_of_all_cells": 0.14251207729468598,
+          "routed": 59,
+          "source_images": 38
+        }
+      },
+      "support_cells": 78,
+      "support_fraction_of_all_cells": 0.18840579710144928,
+      "support_images": 39
+    },
+    "heldout": {
+      "rules": {
+        "cross_agreement": {
+          "candidate_precision": 0.9210526315789473,
+          "correct": 70,
+          "coverage": 0.6551724137931034,
+          "coverage_of_all_cells": 0.10215053763440861,
+          "routed": 76,
+          "source_images": 38
+        },
+        "factorial_agreement": {
+          "candidate_precision": 0.9166666666666666,
+          "correct": 66,
+          "coverage": 0.6206896551724138,
+          "coverage_of_all_cells": 0.0967741935483871,
+          "routed": 72,
+          "source_images": 36
+        },
+        "gg_constituent": {
+          "candidate_precision": 0.7758620689655172,
+          "correct": 90,
+          "coverage": 1.0,
+          "coverage_of_all_cells": 0.15591397849462366,
+          "routed": 116,
+          "source_images": 58
+        },
+        "self_agreement": {
+          "candidate_precision": 0.8181818181818182,
+          "correct": 72,
+          "coverage": 0.7586206896551724,
+          "coverage_of_all_cells": 0.11827956989247312,
+          "routed": 88,
+          "source_images": 44
+        },
+        "three_of_four_vote": {
+          "candidate_precision": 0.8260869565217391,
+          "correct": 76,
+          "coverage": 0.7931034482758621,
+          "coverage_of_all_cells": 0.12365591397849462,
+          "routed": 92,
+          "source_images": 46
+        }
+      },
+      "support_cells": 116,
+      "support_fraction_of_all_cells": 0.15591397849462366,
+      "support_images": 58
+    }
+  },
+  "schema_version": "factorial-attribution-analysis-v1",
+  "system_cost": {
+    "completed_image_level_records": {
+      "doubao_proposer": 200,
+      "gemini_proposer": 200,
+      "qwen_doubao_component_verifier": 184,
+      "qwen_gemini_component_verifier": 191
+    },
+    "maximum_calls_per_image": 4,
+    "mean_input_tokens_per_image": 5061.18,
+    "mean_output_tokens_per_image": 915.59,
+    "mean_reasoning_tokens_per_image": 1951.66,
+    "mean_records_per_image": 3.875,
+    "network_calls_for_attribution_analysis": 0,
+    "recorded_input_tokens": 1012236,
+    "recorded_output_tokens": 183118,
+    "recorded_reasoning_tokens": 390332,
+    "reuse": "image-level proposals and component checks are reused across all distances and candidate orders; four recombinations and candidate matching are deterministic and require no additional VLM calls",
+    "statebind200_images": 200,
+    "total_image_level_records": 775
+  },
+  "validation_and_margin": {
+    "development": {
+      "d4_cells": 138,
+      "full_agreement_with_component_validation": {
+        "candidate_precision": 0.98,
+        "correct": 49,
+        "coverage": 0.12077294685990338,
+        "routed": 50,
+        "source_images": 37
+      },
+      "full_agreement_without_component_validation": {
+        "candidate_precision": 0.9473684210526315,
+        "correct": 72,
+        "coverage": 0.18357487922705315,
+        "routed": 76,
+        "source_images": 55
+      },
+      "validated_full_agreement_all_distances": {
+        "candidate_precision": 0.9166666666666666,
+        "correct": 121,
+        "coverage": 0.3188405797101449,
+        "routed": 132,
+        "source_images": 37
+      },
+      "validated_full_agreement_by_distance": {
+        "1": {
+          "candidate_precision": 0.8285714285714286,
+          "correct": 29,
+          "coverage": 0.2536231884057971,
+          "routed": 35,
+          "source_images": 27
+        },
+        "2": {
+          "candidate_precision": 0.9148936170212766,
+          "correct": 43,
+          "coverage": 0.34057971014492755,
+          "routed": 47,
+          "source_images": 34
+        },
+        "4": {
+          "candidate_precision": 0.98,
+          "correct": 49,
+          "coverage": 0.36231884057971014,
+          "routed": 50,
+          "source_images": 37
+        }
+      }
+    },
+    "heldout": {
+      "d4_cells": 240,
+      "full_agreement_with_component_validation": {
+        "candidate_precision": 0.9166666666666666,
+        "correct": 66,
+        "coverage": 0.0967741935483871,
+        "routed": 72,
+        "source_images": 36
+      },
+      "full_agreement_without_component_validation": {
+        "candidate_precision": 0.7794117647058824,
+        "correct": 106,
+        "coverage": 0.1827956989247312,
+        "routed": 136,
+        "source_images": 68
+      },
+      "validated_full_agreement_all_distances": {
+        "candidate_precision": 0.7870370370370371,
+        "correct": 170,
+        "coverage": 0.2903225806451613,
+        "routed": 216,
+        "source_images": 51
+      },
+      "validated_full_agreement_by_distance": {
+        "1": {
+          "candidate_precision": 0.6857142857142857,
+          "correct": 48,
+          "coverage": 0.2755905511811024,
+          "routed": 70,
+          "source_images": 35
+        },
+        "2": {
+          "candidate_precision": 0.7567567567567568,
+          "correct": 56,
+          "coverage": 0.296,
+          "routed": 74,
+          "source_images": 37
+        },
+        "4": {
+          "candidate_precision": 0.9166666666666666,
+          "correct": 66,
+          "coverage": 0.3,
+          "routed": 72,
+          "source_images": 36
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "all_second_review_images_included": true,
+  "coordinate_integrity": {
+    "final_xy_frame": "displayed_image_pixels",
+    "normalized_1000_rescaled_again": false,
+    "out_of_bounds_points": 0,
+    "primary_points_checked": 310,
+    "second_reviewer_coordinate_frame": "original_image_pixels",
+    "second_reviewer_points_checked": 320,
+    "stored_image_pixel_frame_shared": true
+  },
+  "families": 11,
+  "greater_than_one_tick_images": [
+    "r4_031",
+    "r4r_016"
+  ],
+  "images": 40,
+  "local_scale_orientation_difference_degrees_median": 0.17157784965223005,
+  "majority_effect": {
+    "complete": 0.15299479166666666,
+    "excluding_greater_than_one_tick": 0.1554232804232804
+  },
+  "pre_outcome_selection": {
+    "browser_blinding": {
+      "evaluator_answers_exposed": false,
+      "model_predictions_exposed": false,
+      "model_proposals_exposed": false,
+      "primary_geometry_exposed": false,
+      "sampling_strata_exposed": false
+    },
+    "family_counts": {
+      "flow_meter": 2,
+      "fuel_gauge": 1,
+      "measuring_cylinder": 9,
+      "rain_gauge": 1,
+      "ruler": 7,
+      "sphygmomanometer": 4,
+      "spirometer": 1,
+      "syringe": 3,
+      "thermometer": 10,
+      "vernier_caliper": 1,
+      "weighing_scale": 1
+    },
+    "operator_counts": {
+      "absolute_position": 8,
+      "boundary_position": 24,
+      "span_difference": 8
+    },
+    "sample_size": 40,
+    "schema_version": "statebind-second-annotator40-selection-v1",
+    "seed": 20260822,
+    "selection_unit": "unique StateBind-200 image",
+    "source_counts": {
+      "real200_new131": 26,
+      "unified_human_geometry72_included69": 14
+    },
+    "visibility_counts": {
+      "clear": 28,
+      "usable": 12
+    }
+  },
+  "single_reader_effect_excluding_greater_than_one_tick": {
+    "doubao": 0.08267195767195767,
+    "gemini": 0.16666666666666666,
+    "qwen_batch_no_thinking": 0.1593915343915344
+  },
+  "target_difference_ticks": {
+    "median": 0.07991380905028451,
+    "p90": 0.3837439110389912,
+    "within_half_tick": 37,
+    "within_one_tick": 38
+  },
+  "tick_spacing_ratio_median": 1.0456744856229538
+}

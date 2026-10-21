@@ -1,0 +1,28 @@
+{
+  "component_proposers": {
+    "doubao": "doubao-seed-2.1-turbo / reasoning disabled",
+    "gemini": "gemini-3.6-flash / medium thinking"
+  },
+  "component_verifier": "qwen3.8-max / thinking disabled",
+  "main_matrix": {
+    "doubao": {
+      "access_date_utc": "2026-08-18",
+      "reasoning": "disabled",
+      "requested_model": "doubao-seed-2.1-turbo",
+      "returned_model": "doubao-seed-2-1-turbo-260628"
+    },
+    "gemini": {
+      "access_date_utc": "2026-08-18",
+      "reasoning": "medium",
+      "requested_model": "gemini-3.6-flash",
+      "returned_model": "gemini-3.6-flash"
+    },
+    "qwen_batch_no_thinking": {
+      "access_date_utc": "2026-08-19",
+      "reasoning": "disabled",
+      "requested_model": "qwen3.8-max",
+      "returned_model": "qwen3.8-max"
+    }
+  },
+  "schema_version": "statebind-model-protocol-v1"
+}

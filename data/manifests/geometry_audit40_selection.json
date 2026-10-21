@@ -1,0 +1,39 @@
+{
+  "browser_blinding": {
+    "evaluator_answers_exposed": false,
+    "model_predictions_exposed": false,
+    "model_proposals_exposed": false,
+    "primary_geometry_exposed": false,
+    "sampling_strata_exposed": false
+  },
+  "family_counts": {
+    "flow_meter": 2,
+    "fuel_gauge": 1,
+    "measuring_cylinder": 9,
+    "rain_gauge": 1,
+    "ruler": 7,
+    "sphygmomanometer": 4,
+    "spirometer": 1,
+    "syringe": 3,
+    "thermometer": 10,
+    "vernier_caliper": 1,
+    "weighing_scale": 1
+  },
+  "operator_counts": {
+    "absolute_position": 8,
+    "boundary_position": 24,
+    "span_difference": 8
+  },
+  "sample_size": 40,
+  "schema_version": "statebind-second-annotator40-selection-v1",
+  "seed": 20260822,
+  "selection_unit": "unique StateBind-200 image",
+  "source_counts": {
+    "real200_new131": 26,
+    "unified_human_geometry72_included69": 14
+  },
+  "visibility_counts": {
+    "clear": 28,
+    "usable": 12
+  }
+}

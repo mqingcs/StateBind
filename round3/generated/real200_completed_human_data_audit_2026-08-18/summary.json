@@ -1,0 +1,298 @@
+{
+  "canonical_inputs": {
+    "master_history": "reports/MASTER_RESEARCH_HISTORY_AND_EVIDENCE_ARCHIVE_2026-08-14.md",
+    "new_human_annotations": "round3/annotations/private/real200_sol_high_refinement_user_primary.json",
+    "new_queue": "round3/frozen/real200_sol_high_human_refinement/inference.jsonl",
+    "new_sealed_evaluation": "round3/frozen/real200_sol_high_human_refinement/evaluation_sealed.jsonl",
+    "old69_geometry": "round3/frozen/unified_human_geometry72/geometry_annotations.jsonl"
+  },
+  "combined200": {
+    "duplicate_normalized_image_group_count": 0,
+    "duplicate_normalized_image_groups": {},
+    "duplicate_original_image_group_count": 0,
+    "duplicate_original_image_groups": {},
+    "human_gold_rows": 200,
+    "instrument_family_counts": {
+      "flow_meter": 7,
+      "fuel_gauge": 2,
+      "measuring_cylinder": 50,
+      "rain_gauge": 4,
+      "ruler": 25,
+      "sphygmomanometer": 19,
+      "spirometer": 6,
+      "syringe": 12,
+      "thermometer": 73,
+      "vernier_caliper": 1,
+      "weighing_scale": 1
+    },
+    "pending_rows": 0,
+    "prior_perceptual_duplicate_audit_applicability": {
+      "prior_conservative_pairs": 0,
+      "source": "round3/frozen/real200_human_geometry200/processing_summary.json",
+      "source_images_unchanged_since_prior_audit": true
+    },
+    "rows": 200,
+    "source_collection_counts": {
+      "real200_new131": 131,
+      "unified_human_geometry72_included69": 69
+    }
+  },
+  "completion": {
+    "all_saved_items_human_confirmed": true,
+    "annotation_active_seconds": {
+      "capped_at_3600_rows": 1,
+      "max": 3600.0,
+      "median": 51.825,
+      "min": 1.887,
+      "p10": 26.455,
+      "p25": 35.6935,
+      "p75": 71.258,
+      "p90": 99.72,
+      "total": 11721.565
+    },
+    "annotation_rows": 131,
+    "human_modified_prefill_rows": 131,
+    "id_sets_equal": true,
+    "included_rows": 131,
+    "model_numeric_prediction_shown": false,
+    "model_prefill_shown": true,
+    "modified_prefill_field_count_distribution": {
+      "2": 4,
+      "3": 6,
+      "4": 16,
+      "5": 77,
+      "6": 15,
+      "7": 6,
+      "8": 6,
+      "9": 1
+    },
+    "queue_rows": 131,
+    "sealed_rows": 131,
+    "source_reference_shown": false
+  },
+  "created_at_utc": "2026-08-18T14:55:46.944525+00:00",
+  "descriptive_geometry_notes": {
+    "interpretation": "descriptive only; these notes do not invalidate the human geometry",
+    "note_counts": {
+      "target_projection_extends_beyond_axis_segment": 10,
+      "wide_single_readout_uncertainty_interval": 1
+    },
+    "rows_with_any_note": 11
+  },
+  "new131_distribution": {
+    "coordinate_mode_counts": {
+      "normalized_1000": 131
+    },
+    "effective_operator_counts": {
+      "absolute_position": 20,
+      "boundary_position": 88,
+      "span_difference": 23
+    },
+    "instrument_family_counts": {
+      "fuel_gauge": 2,
+      "measuring_cylinder": 35,
+      "rain_gauge": 4,
+      "ruler": 25,
+      "sphygmomanometer": 5,
+      "thermometer": 58,
+      "vernier_caliper": 1,
+      "weighing_scale": 1
+    },
+    "raw_target_rule_counts": {
+      "absolute_position": 20,
+      "boundary_position": 90,
+      "span_difference": 21
+    },
+    "visibility_counts": {
+      "clear": 82,
+      "usable": 49
+    }
+  },
+  "new131_geometry": {
+    "anchor_distance_to_readout_ticks": {
+      "max": 4.166666666666642,
+      "median": 0.5047923220883463,
+      "min": 0.0015060216024712367,
+      "p10": 0.08243886383294798,
+      "p25": 0.2021991781694974,
+      "p75": 0.8919906892809281,
+      "p90": 1.6458234012726816
+    },
+    "anchor_within_5_ticks_rows": 131,
+    "axis_length_px": {
+      "max": 990.4551837785672,
+      "median": 434.07924396406116,
+      "min": 112.56672510115946,
+      "p10": 230.25600000000003,
+      "p25": 314.644,
+      "p75": 563.4809353584633,
+      "p90": 768.1476401033414
+    },
+    "basic_geometry_valid_rows": 131,
+    "distance_offset_feasible_rows": {
+      "1": 131,
+      "2": 128,
+      "4": 122
+    },
+    "distance_offset_infeasible_ids": {
+      "1": [],
+      "2": [
+        "r4_040",
+        "r4_058",
+        "r4_113"
+      ],
+      "4": [
+        "r4_017",
+        "r4_033",
+        "r4_040",
+        "r4_052",
+        "r4_058",
+        "r4_083",
+        "r4_090",
+        "r4_113",
+        "r4p_004"
+      ]
+    },
+    "failed_basic_check_rows": [],
+    "target_click_perpendicular_correction_ticks": {
+      "max": 14.323303533116992,
+      "median": 0.5614074715370453,
+      "min": 0.004981166955470942,
+      "p10": 0.0928434332928461,
+      "p25": 0.18380937801763636,
+      "p75": 0.8932395684805599,
+      "p90": 2.155179755015376
+    },
+    "target_interval_width_ticks": {
+      "max": 203.16349063384845,
+      "median": 0.6374592098074452,
+      "min": 0.0,
+      "p10": 0.08782729383848055,
+      "p25": 0.3902061739944567,
+      "p75": 1.2901183822105715,
+      "p90": 47.76308491169895
+    },
+    "tick_click_perpendicular_correction_ticks": {
+      "max": 26.78893291588529,
+      "median": 0.15947416438071504,
+      "min": 0.0,
+      "p10": 0.015022132088541675,
+      "p25": 0.07300108307876754,
+      "p75": 0.32200969299988746,
+      "p90": 1.2120506055548603
+    },
+    "tick_spacing_px": {
+      "max": 137.03528706074383,
+      "median": 7.3215692131980745,
+      "min": 1.8301942290573265,
+      "p10": 3.594152542421341,
+      "p25": 4.938133109236546,
+      "p75": 10.294962443550418,
+      "p90": 27.513586740801543
+    }
+  },
+  "old69_compatibility": {
+    "multi_tick_gap_cv": {
+      "max": 0.2493903483197522,
+      "median": 0.08851038033853306,
+      "min": 8.335041251403073e-16,
+      "p10": 0.00651495846471348,
+      "p25": 0.041744719701315804,
+      "p75": 0.1254901839195673,
+      "p90": 0.2155765262617303
+    },
+    "multi_tick_gap_cv_over_0_2_ids": [
+      "r2_01",
+      "r2_02",
+      "r2_22",
+      "r2_24"
+    ],
+    "multi_tick_gap_cv_over_0_2_rows": 4,
+    "multi_tick_rows": 24,
+    "old_raw_geometry_rewritten": false,
+    "rows": 69,
+    "two_tick_rows": 45
+  },
+  "physicalization_cell_readiness": {
+    "interpretation": "readiness is per image-distance cell and does not start or score a model experiment",
+    "ready_rows_by_distance": {
+      "1": 129,
+      "2": 126,
+      "4": 120
+    }
+  },
+  "quality_attention": {
+    "interpretation": "notes are unit-resolution or image-distance-cell constraints unless explicitly stated otherwise",
+    "note_counts": {
+      "four_tick_offset_not_visible_on_annotated_axis": 9,
+      "two_tick_offset_not_visible_on_annotated_axis": 3,
+      "unit_resolution_needed_before_numeric_candidate_generation": 2
+    },
+    "rows_with_any_note": 11,
+    "whole_image_exclusions_from_this_processing": 0
+  },
+  "ruler_semantics": {
+    "decision_rule": "ruler target separation greater than 3 local ticks is interpreted as start/end span; otherwise as one readout-position interval",
+    "ruler_rows": 25,
+    "single_readout_ids": [
+      "r4_085",
+      "r4r_001",
+      "r4r_011"
+    ],
+    "single_readout_rows": 3,
+    "span_endpoint_ids": [
+      "r4_013",
+      "r4_020",
+      "r4_029",
+      "r4_037",
+      "r4_066",
+      "r4_077",
+      "r4_111",
+      "r4_124",
+      "r4p_001",
+      "r4p_003",
+      "r4r_002",
+      "r4r_003",
+      "r4r_004",
+      "r4r_005",
+      "r4r_006",
+      "r4r_009",
+      "r4r_010",
+      "r4r_014",
+      "r4r_016",
+      "r4r_017",
+      "r4r_020",
+      "r4r_022"
+    ],
+    "span_endpoint_rows": 22
+  },
+  "schema_version": "real200-completed-human-data-audit-v1",
+  "scope": {
+    "mainline_experiments_started": false,
+    "model_calls": 0,
+    "old_outputs_rewritten": false,
+    "output_is_derived_from_existing_human_and_dataset_metadata": true
+  },
+  "superseded_snapshot_notice": {
+    "path": "round3/frozen/real200_human_geometry200/processing_summary.json",
+    "recorded_state": "195 human gold plus 5 pending before replacement annotations were finished",
+    "rewritten": false
+  },
+  "unit_resolution": {
+    "manual_unit_resolution_needed_ids": [
+      "r4_075",
+      "r4_087"
+    ],
+    "manual_unit_resolution_needed_rows": 2,
+    "numeric_candidate_ready_rows": 129,
+    "status_counts": {
+      "annotation_branch_supplies_implicit_unit": 5,
+      "converted_unit_branch": 1,
+      "dimensionless_fraction": 1,
+      "evaluator_metadata_supplies_unspecified_unit": 1,
+      "exact_unit_branch": 120,
+      "manual_unit_resolution_needed": 2,
+      "opaque_unit_shared_with_unitless_evaluator": 1
+    }
+  }
+}

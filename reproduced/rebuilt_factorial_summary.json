@@ -1,0 +1,52 @@
+{
+  "category_counts": {
+    "3/4 invariant": 76,
+    "4/4 invariant": 216,
+    "invalid/component-insufficient": 388,
+    "lattice-source sensitive": 52,
+    "target-source sensitive": 12
+  },
+  "cells": 744,
+  "fallback_policy": {
+    "doubao": {
+      "accuracy": 0.6881720430107527,
+      "transitions": {
+        "correct_to_correct": 494,
+        "correct_to_wrong": 4,
+        "wrong_to_correct": 18,
+        "wrong_to_wrong": 228
+      }
+    },
+    "gemini": {
+      "accuracy": 0.7473118279569892,
+      "transitions": {
+        "correct_to_correct": 549,
+        "correct_to_wrong": 4,
+        "wrong_to_correct": 7,
+        "wrong_to_wrong": 184
+      }
+    },
+    "qwen_batch_no_thinking": {
+      "accuracy": 0.7352150537634409,
+      "transitions": {
+        "correct_to_correct": 543,
+        "correct_to_wrong": 4,
+        "wrong_to_correct": 4,
+        "wrong_to_wrong": 193
+      }
+    }
+  },
+  "route": {
+    "candidate_precision": 0.9166666666666666,
+    "cell_coverage": 0.0967741935483871,
+    "cells": 72,
+    "correct": 66,
+    "images": 36
+  },
+  "schema_version": "statebind-artifact-rebuilt-factorial-v1",
+  "selected_rule": {
+    "minimum_distance": 4,
+    "rule_name": "four_only",
+    "test_labels_used_for_selection": false
+  }
+}

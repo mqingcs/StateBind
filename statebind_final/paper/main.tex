@@ -1,0 +1,75 @@
+\documentclass[runningheads,a4paper]{llncs}
+
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+\renewcommand\UrlFont{\color{blue}\rmfamily}
+\urlstyle{rm}
+
+\graphicspath{{figures/}}
+\input{tables/generated_macros}
+
+\setlength{\textfloatsep}{10pt plus 2pt minus 2pt}
+\setlength{\floatsep}{8pt plus 2pt minus 2pt}
+\setlength{\intextsep}{8pt plus 2pt minus 2pt}
+\setlength{\abovecaptionskip}{6pt}
+\widowpenalty=150
+\clubpenalty=150
+
+\makeatletter\def\institutename{\par\begingroup\parskip=\z@\parindent=\z@\setcounter{@inst}{1}\def\and{\par\stepcounter{@inst}\noindent\textsuperscript{\the@inst}\enspace\ignorespaces}\setbox0=\vbox{\def\thanks##1{}\@institute}\ifnum\c@@inst=1\relax\gdef\fnnstart{0}\else\xdef\fnnstart{\c@@inst}\setcounter{@inst}{1}\noindent\textsuperscript{\the@inst}\enspace\fi\ignorespaces\@institute\par\endgroup}\makeatother
+\renewcommand{\orcidID}[1]{\unskip\textsuperscript{[#1]}}
+\newcommand{\repeatthanks}{\textsuperscript{$\star$}}
+\newcommand{\method}{\textsc{StateBind}}
+\newcommand{\dataset}{\textsc{StateBind-200}}
+\newcommand{\numeric}{\textsc{Numeric}}
+\newcommand{\calibrated}{\textsc{Calibrated}}
+\newcommand{\physicalized}{\textsc{Physicalized}}
+\newcommand{\factorial}{\textsc{Factorial StateBind}}
+\newcommand{\tick}{\mathrm{tick}}
+\newcommand{\R}{\mathcal{R}}
+\newcommand{\C}{\mathcal{C}}
+\newcommand{\Hset}{\mathcal{H}}
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+
+\begin{document}
+
+\title{StateBind: Exposing the Symbol-to-State Binding Gap in Visual Measurement}
+\titlerunning{StateBind: Symbol-to-State Binding in Visual Measurement}
+\author{Qing Mu\inst{1}\thanks{Equal contribution.}\orcidID{0009-0004-9571-2728} \and
+Jiani Zheng\inst{2}\repeatthanks\orcidID{0009-0006-2835-5147}}
+\authorrunning{Q. Mu and J. Zheng}
+\tocauthor{Qing Mu and Jiani Zheng}
+\institute{The Chinese University of Hong Kong, Shenzhen, Shenzhen, China\\
+\email{qingmu@link.cuhk.edu.cn} \and
+Tencent, Shenzhen, China\\
+\email{ninajnzheng@tencent.com}}
+\maketitle
+
+\begin{abstract}
+Reliable vision systems should connect numerical claims to visible evidence. In visual measurement, this requires mapping candidate values to image-specific physical states. \dataset{} augments \DatasetImages{} real images with human-refined local geometry and matched \numeric{}, \calibrated{}, and \physicalized{} interfaces. Across a \PairedImages{}-image held-out evaluation and \FormalCalls{} controlled calls, physicalizing identical candidates raises three-model majority accuracy from \MajorityNumeric\% to \MajorityPhysicalized\%, a source-image-balanced gain of \MajorityBalancedGain{} points. Calibration and additional reasoning leave most of the gap intact; target localization can succeed despite incorrect value--lattice binding, with a larger burden for two-endpoint ruler spans. An independent \GeometryAuditImages{}-image geometry audit yields a \GeometryAuditTargetMedian{}-tick median target discrepancy and preserves the main effect under disagreement sensitivity.
+
+We further propose \factorial{}, a training-free selective verifier. Two VLMs propose target and lattice components, an independent VLM validates their evidence, and valid combinations are resolved deterministically. A precision mode selected on 69 development images combines component validity, four-way agreement, and state separation. Applied unchanged to held-out evaluation, this high-precision evidence gate reaches \FactorialTestPrecision\% candidate precision across \FactorialTestImages{}/128 images (\FactorialImageCoverage\%) and \FactorialTestCoverage\% of ordered cells. The results identify instance-specific symbol-to-state binding as a distinct reliability bottleneck and provide an interpretable evidence gate for numerical visual claims.
+
+\keywords{Vision-language models \and visual measurement \and visual grounding \and multimodal reliability \and selective verification.}
+\end{abstract}
+
+\input{sections/01_introduction}
+\input{sections/02_related_work}
+\input{sections/03_task_and_data}
+\input{sections/04_binding_gap}
+\input{sections/05_method}
+\input{sections/06_experiments}
+\input{sections/07_discussion}
+\input{sections/08_conclusion}
+
+\bibliographystyle{splncs04}
+\bibliography{references}
+
+\end{document}
