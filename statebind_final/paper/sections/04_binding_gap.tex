@@ -5,8 +5,9 @@
   \centering
   \caption{\textbf{Matched interface comparison on Paired128.} Interface columns are call accuracies (\%). The final column is the source-image-balanced Physicalized-minus-Numeric effect in percentage points, so it need not equal the difference of rounded call accuracies.}
   \label{tab:main}
-  \scriptsize
-  \resizebox{\textwidth}{!}{\input{tables/main_results.tex}}
+  \small
+  \setlength{\tabcolsep}{4pt}
+  \input{tables/main_results.tex}
 \end{table}
 
 \subsection{Physicalized Candidates Improve Verification}
@@ -18,6 +19,7 @@ All-model correctness rises from \AllCorrectNumeric\% to \AllCorrectPhysicalized
 \begin{figure}[t]
   \centering
   \includegraphics[width=\textwidth]{fig2_representation_ladder.pdf}
+  \Description{Two panels compare Numeric, Calibrated, and Physicalized call accuracy for Doubao, Gemini, Qwen, and the three-model majority, then show positive image-balanced Physicalized-minus-Numeric effects with bootstrap confidence intervals. Calibration stays near Numeric.}
   \caption{\textbf{Matched interface comparison.} Left: call accuracy for the three interfaces. Right: source-image-balanced Physicalized-minus-Numeric effects with 95\% source-image bootstrap intervals. Calibration remains near Numeric, while physicalizing candidate states produces a consistent gain.}
   \label{fig:ladder}
 \end{figure}
@@ -27,7 +29,7 @@ The result is not driven by one instrument type. Removing each major family leav
 \subsection{Physicalization Gains Persist Across Reasoning Budgets}
 \label{sec:reasoning}
 
-Fresh45 provides matched effort matrices for additional model settings. Physicalized $-$ Numeric effects remain positive for Gemini at minimal/medium/high effort ($+16.30/+19.63/+18.15$ points), GPT-5.6 Terra at low/medium/high ($+16.30/+17.41/+14.81$), and Qwen at low/medium/extra-high ($+24.81/+25.56/+27.04$). GPT-5.6 Sol at medium effort independently rises from 81.85\% to 91.85\%. Low-effort Physicalized also exceeds high-effort Numeric by 10.00, 13.70, and 25.56 points for Gemini, Terra, and Qwen. Increasing language-side computation does not substitute for the missing image-specific state map.
+Fresh45 provides matched effort matrices for additional model settings. Physicalized $-$ Numeric effects remain positive for Gemini at minimal/medium/high effort ($+16.30/\allowbreak +19.63/\allowbreak +18.15$ points), GPT-5.6 Terra at low/medium/high ($+16.30/\allowbreak +17.41/\allowbreak +14.81$), and Qwen at low/medium/extra-high ($+24.81/\allowbreak +25.56/\allowbreak +27.04$). GPT-5.6 Sol at medium effort independently rises from 81.85\% to 91.85\%. Low-effort Physicalized also exceeds high-effort Numeric by 10.00, 13.70, and 25.56 points for Gemini, Terra, and Qwen. Increasing language-side computation does not substitute for the missing image-specific state map.
 
 \subsection{Complementary Probes of the Gap}
 
@@ -36,6 +38,7 @@ The automatic proposers expose target and lattice estimates before human geometr
 \begin{figure}[t]
   \centering
   \includegraphics[width=\textwidth]{fig3_mechanism.pdf}
+  \Description{An annotated instrument image shows an accurately localized target beside a displaced scale lattice. Two charts compare target and lattice localization within one tick and show larger Physicalized gains for two-endpoint ruler spans than for single-state tasks.}
   \caption{\textbf{Complementary probes.} A real proposal can localize the measured boundary while placing the local lattice incorrectly. Aggregate target and lattice errors show the same separation, and Physicalized gains are larger for two-endpoint ruler spans than for single-state tasks. Source image: MeasureBench~\cite{lin2026measurebench}, CC BY-SA 4.0; cropped and annotated by the authors.}
   \label{fig:mechanism}
 \end{figure}

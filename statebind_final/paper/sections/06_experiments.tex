@@ -5,8 +5,8 @@
   \centering
   \caption{\textbf{Same-support attribution.} All rows use four executable target--lattice combinations and four-tick candidate separation. Dev support contains 78 ordered cells; held-out support contains 116. Cell coverage is measured over all 744 held-out cells.}
   \label{tab:selective}
-  \scriptsize
-  \setlength{\tabcolsep}{3.8pt}
+  \small
+  \setlength{\tabcolsep}{4pt}
   \input{tables/selective_results.tex}
 \end{table}
 
@@ -25,6 +25,7 @@ Component validation and candidate separation are both necessary for the selecte
 \begin{figure}[t]
   \centering
   \includegraphics[width=0.90\textwidth]{fig5_reliability_atlas.pdf}
+  \Description{Two panels show accuracy on the fixed 72-cell route and candidate precision at different state separations. Numeric reader results are compared with the automatic verifier on identical routed cells; stronger state separation raises precision among four-way agreements.}
   \caption{\textbf{Exact-route behavior and state separation.} Left: the exact 72-cell route compared with its Numeric readers; labels report correct/routed counts. Right: candidate separation sharpens precision among validated four-way agreements.}
   \label{fig:frontier}
 \end{figure}

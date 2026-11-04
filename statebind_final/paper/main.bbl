@@ -1,0 +1,161 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\providecommand{\doi}[1]{https://doi.org/#1}
+
+\bibitem{bhat2026consistentwrong}
+Bhat, S.D., Yamasaki, T.: Consistent yet wrong: Evidence insensitivity in
+  spatial vision-language models. In: Proceedings of the IEEE/CVF Conference on
+  Computer Vision and Pattern Recognition Workshops. pp. 7463--7472 (2026)
+
+\bibitem{chen2024spatialvlm}
+Chen, B., Xu, Z., Kirmani, S., Ichter, B., Sadigh, D., Guibas, L., Xia, F.:
+  {SpatialVLM}: Endowing vision-language models with spatial reasoning
+  capabilities. In: Proceedings of the IEEE/CVF Conference on Computer Vision
+  and Pattern Recognition. pp. 14455--14465 (2024).
+  \doi{10.1109/CVPR52733.2024.01370}
+
+\bibitem{dancette2023selectivevqa}
+Dancette, C., Whitehead, S., Maheshwary, R., Vedantam, R., Scherer, S., Chen,
+  X., Cord, M., Rohrbach, M.: Improving selective visual question answering by
+  learning from your peers. In: Proceedings of the IEEE/CVF Conference on
+  Computer Vision and Pattern Recognition. pp. 24049--24059 (2023)
+
+\bibitem{deitke2024molmo}
+Deitke, M., Clark, C., Lee, S., Tripathi, R., Yang, Y., Park, J.S., Salehi, M.,
+  Muennighoff, N., Lo, K., Soldaini, L., et~al.: Molmo and {PixMo}: Open
+  weights and open data for state-of-the-art vision-language models. In:
+  Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern
+  Recognition. pp. 91--104 (2025)
+
+\bibitem{elyaniv2010selective}
+El-Yaniv, R., Wiener, Y.: On the foundations of noise-free selective
+  classification. Journal of Machine Learning Research  \textbf{11},
+  1605--1641 (2010)
+
+\bibitem{feng2025visualpromptfragility}
+Feng, H., Lian, L., Dunlap, L., Shu, J., Wang, X., Wang, R., Darrell, T., Suhr,
+  A., Kanazawa, A.: Visually prompted benchmarks are surprisingly fragile.
+  arXiv preprint arXiv:2512.17875  (2025)
+
+\bibitem{fu2024blink}
+Fu, X., Hu, Y., Li, B., Feng, Y., Wang, H., Lin, X., Roth, D., Smith, N.A., Ma,
+  W.C., Krishna, R.: {BLINK}: Multimodal large language models can see but not
+  perceive. In: Computer Vision -- ECCV 2024. Lecture Notes in Computer
+  Science, vol. 15081, pp. 148--166. Springer (2024)
+
+\bibitem{geifman2017selective}
+Geifman, Y., El-Yaniv, R.: Selective classification for deep neural networks.
+  In: Advances in Neural Information Processing Systems. vol.~30 (2017)
+
+\bibitem{hu2026trisca}
+Hu, Y., Li, G., Lan, Y., Yu, Q., Yang, Z., Jing, J., Fan, Z., Deng, X.: State
+  beyond appearance: Diagnosing and improving state consistency in dial-based
+  measurement reading. arXiv preprint arXiv:2604.26614  (2026)
+
+\bibitem{jin2026scalebench}
+Jin, J., Chen, R., Zhang, H., Liu, Z., Wang, H., Ye, Q., Liu, J.: Tiny scales,
+  great challenges: The limits of multimodal {LLM}s in scale recognition. In:
+  Proceedings of the 64th Annual Meeting of the Association for Computational
+  Linguistics. pp. 40619--40632. Association for Computational Linguistics
+  (2026). \doi{10.18653/v1/2026.acl-long.1887}
+
+\bibitem{kamath2021mdetr}
+Kamath, A., Singh, M., LeCun, Y., Synnaeve, G., Misra, I., Carion, N.: {MDETR}:
+  Modulated detection for end-to-end multi-modal understanding. In: Proceedings
+  of the IEEE/CVF International Conference on Computer Vision. pp. 1780--1790
+  (2021)
+
+\bibitem{khan2024consistency}
+Khan, Z., Fu, Y.: Consistency and uncertainty: Identifying unreliable responses
+  from black-box vision-language models for selective visual question
+  answering. In: Proceedings of the IEEE/CVF Conference on Computer Vision and
+  Pattern Recognition. pp. 10854--10863 (2024)
+
+\bibitem{li2026groundingme}
+Li, R., Li, L., Ren, S., Tian, H., Gu, S., Li, S., Yue, Z., Wang, Y., Ma, W.,
+  Yang, Z., Ma, J., Sui, Z., Luo, F.: {GroundingME}: Exposing the visual
+  grounding gap in {MLLMs} through multi-dimensional evaluation. In:
+  Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern
+  Recognition. pp. 2412--2422 (2026)
+
+\bibitem{liao2025selfcorrect}
+Liao, Y.H., Mahmood, R., Fidler, S., Acuna, D.: Can large vision-language
+  models correct semantic grounding errors by themselves? In: Proceedings of
+  the IEEE/CVF Conference on Computer Vision and Pattern Recognition. pp.
+  14667--14678 (2025)
+
+\bibitem{lin2026measurebench}
+Lin, F., Liu, Y., Xu, H., Chen, Y., He, Z., Zhao, M., Chen, M.H., Yao, J.G.,
+  Yang, X.: Do vision-language models measure up? benchmarking visual
+  measurement reading with {MeasureBench}. In: Proceedings of the IEEE/CVF
+  Conference on Computer Vision and Pattern Recognition. pp. 38544--38553
+  (2026)
+
+\bibitem{pan2026rulernet}
+Pan, Y., Mehta, M., Sincerbeaux, G., Goldstein, J.A., Gernand, A.D., Wang,
+  J.Z.: {RulerNet}: Learning perspective-invariant ruler representations for
+  robust image scale estimation. Computerized Medical Imaging and Graphics
+  \textbf{134},  102805 (2026). \doi{10.1016/j.compmedimag.2026.102805}
+
+\bibitem{reitsma2024underpressure}
+Reitsma, M., Keller, J., Blomqvist, K., Siegwart, R.: Under pressure:
+  Learning-based analog gauge reading in the wild. In: 2024 IEEE International
+  Conference on Robotics and Automation. pp. 14--20. IEEE (2024).
+  \doi{10.1109/ICRA57147.2024.10610793}
+
+\bibitem{sakib2026calibra}
+Sakib, S., Shinde, G., Roy, N.: {CALIBRA}: Calibration-aware multi-agent
+  verification for contactless physiological monitoring. In: Proceedings of the
+  IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops. pp.
+  11372--11382 (2026)
+
+\bibitem{wang2023selfconsistency}
+Wang, X., Wei, J., Schuurmans, D., Le, Q.V., Chi, E.H., Narang, S., Chowdhery,
+  A., Zhou, D.: Self-consistency improves chain of thought reasoning in
+  language models. In: International Conference on Learning Representations
+  (2023)
+
+\bibitem{wei2022chain}
+Wei, J., Wang, X., Schuurmans, D., Bosma, M., Ichter, B., Xia, F., Chi, E.H.,
+  Le, Q.V., Zhou, D.: Chain-of-thought prompting elicits reasoning in large
+  language models. In: Advances in Neural Information Processing Systems.
+  vol.~35, pp. 24824--24837 (2022)
+
+\bibitem{xu2025vpbench}
+Xu, M., Chen, J., Zhao, Y., Li, J.C.L., Qiu, Y., Du, Z., Wu, M., Zhang, P., Li,
+  K., Yang, H., Ma, W., Wei, J., Li, Q., Liu, K., Lei, W.: {VP-Bench}: A
+  comprehensive benchmark for visual prompting in multimodal large language
+  models. Proceedings of the AAAI Conference on Artificial Intelligence
+  \textbf{40}(13),  11332--11341 (2026). \doi{10.1609/aaai.v40i13.38114}
+
+\bibitem{yang2023setofmark}
+Yang, J., Zhang, H., Li, F., Zou, X., Li, C., Gao, J.: Set-of-mark prompting
+  unleashes extraordinary visual grounding in {GPT-4V}. arXiv preprint
+  arXiv:2310.11441  (2023)
+
+\bibitem{you2024ferret}
+You, H., Zhang, H., Gan, Z., Du, X., Zhang, B., Wang, Z., Cao, L., Chang, S.F.,
+  Yang, Y.: Ferret: Refer and ground anything anywhere at any granularity. In:
+  International Conference on Learning Representations (2024)
+
+\bibitem{zhang2026spacenum}
+Zhang, J., Li, Y., Chen, H., Lu, H., Xue, L., Wang, B., Liu, H.: {SPACENUM}:
+  Revisiting spatial numerical understanding in {VLMs}. arXiv preprint
+  arXiv:2605.23898  (2026)
+
+\bibitem{zhang2026concor}
+Zhang, J., Gao, Z., Zettlemoyer, L., Krishna, R.: Vision-language grounding as
+  bidirectional concept correspondence. arXiv preprint arXiv:2608.07886  (2026)
+
+\bibitem{zhang2025consensusentropy}
+Zhang, Y., Liang, T., Huang, X., Cui, E., Wang, G., Guo, X., Li, C., Liu, G.:
+  Consensus entropy: Harnessing multi-{VLM} agreement for self-verifying and
+  self-improving {OCR}. arXiv preprint arXiv:2504.11101  (2025)
+
+\bibitem{zhu2026hitoken}
+Zhu, X., Lu, K., Dong, K., Jiao, S., Wu, H., Du, Z., Mao, S., Zhang, D., Xue,
+  J.: {Hi-Token}: Hierarchical coordinate tokenization for generative visual
+  grounding. arXiv preprint arXiv:2608.03471  (2026)
+
+\end{thebibliography}

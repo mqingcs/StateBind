@@ -1,7 +1,15 @@
 \section{Factorial StateBind}
 \label{sec:method}
 
-Oracle Physicalized uses human geometry. An automatic verifier must instead estimate the target state and the value--scale mapping from the image, while recognizing when those estimates support a stable choice. The pipeline has three steps: factor two proposals into target and lattice components, verify each component once, and accept only choices invariant to exchanging component sources.
+Oracle Physicalized uses human geometry. An automatic verifier must instead estimate the target state and the value--scale mapping from the image, while recognizing when those estimates support a stable choice. The pipeline (Fig.~\ref{fig:architecture}) has three steps: factor two proposals into target and lattice components, verify each component once, and accept only choices invariant to exchanging component sources.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\textwidth]{fig4_factorial_architecture.pdf}
+  \Description{A three-stage diagram uses the existing thermometer example: Doubao and Gemini propose targets and scale lattices, Qwen validates component evidence, and a two-by-two matrix exchanges target and lattice sources. All four valid recombinations choose B, 38.25 degrees Celsius. The precision gate accepts only four-way agreement with at least four-tick candidate separation; otherwise the system retains Numeric.}
+  \caption{\textbf{Factorial StateBind.} Qwen validates Doubao ($D$) and Gemini ($G$) target--lattice proposals. Projected schematic grids show four recombinations: shading marks cross-source pairs; brackets show target-to-B residuals. Precision mode requires four valid agreeing pairs and at least four-tick candidate separation. Source: MeasureBench~\cite{lin2026measurebench}, CC BY-SA 4.0; cropped and annotated by the authors.}
+  \label{fig:architecture}
+\end{figure}
 
 \subsection{Propose, Canonicalize, and Validate}
 
@@ -32,12 +40,7 @@ Combination $(T_i,L_j)$ is executable only when both components pass validation 
 \end{equation}
 where $\R$ is distance from a candidate to a single-state interval or to the estimated endpoint difference. The method therefore changes which source supplies the target and lattice without asking a VLM to make four new holistic guesses.
 
-\begin{figure}[t]
-  \centering
-  \includegraphics[width=\textwidth]{fig4_factorial_architecture.pdf}
-  \caption{\textbf{Factorial StateBind.} Doubao and Gemini independently propose target and lattice components. Qwen verifies their visual evidence. The four valid target--lattice source combinations are resolved deterministically; agreement defines candidate support, while disagreement triggers the Numeric fallback. Precision mode accepts four-source agreement with adequate state separation. Source image: MeasureBench~\cite{lin2026measurebench}, CC BY-SA 4.0; cropped and annotated by the authors.}
-  \label{fig:architecture}
-\end{figure}
+
 
 \subsection{Precision Mode}
 
